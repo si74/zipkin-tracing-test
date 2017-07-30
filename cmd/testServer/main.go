@@ -1,12 +1,17 @@
 package main
 
 import (
+	"io"
 	"log"
 	"net/http"
 )
 
 func main() {
 
-	log.Fatal(http.ListenAndServe(":3000", handler))
+	http.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
+		io.WriteString(w, "salut! ca va?")
+	})
+
+	log.Fatal(http.ListenAndServe(":3000", nil))
 
 }
