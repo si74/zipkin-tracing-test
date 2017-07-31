@@ -1,4 +1,6 @@
 setup:
+	echo "installing glide dependencies"
+	glide install
 	echo "downloading zipkin docker-compose file"
 	./starter.sh
 	echo "Done! Remember to modify docker-compose to include the testserver"
@@ -20,6 +22,8 @@ clean:
 	rm testserver
 	echo "cleaning up docker-compose"
 	rm docker-compose.yml
+	echo "cleaning up vendor folder"
+	rm -rf vendor/
 	echo "All done!"
 
 .PHONY: setup start build up clean
