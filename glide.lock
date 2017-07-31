@@ -1,0 +1,14 @@
+hash: a8b208ad00d738e5218b03658d66c7faa06e4a29c3022041010336c142dd36c2
+updated: 2017-07-30T23:33:07.307835253-04:00
+imports:
+- name: github.com/opentracing/opentracing-go
+  version: 1949ddbfd147afd4d964a9f00b24eb291e0e7c38
+  subpackages:
+  - log
+- name: github.com/openzipkin/zipkin-go-opentracing
+  version: a3f24586d6771f7a52012fc17b05a3f781592173
+- name: golang.org/x/net
+  version: a6577fac2d73be281a500b310739095313165611
+  subpackages:
+  - context
+testImports: []
