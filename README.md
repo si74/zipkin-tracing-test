@@ -3,7 +3,7 @@ Test out OpenTracing with Zipkin
 
 ## Dependencies
 
-golang, docker
+golang, docker, glide
 
 ## Setup
 
@@ -17,6 +17,8 @@ golang, docker
    container_name: testserver
    ports:
      - "3000:3000"
+   environment:
+     ZIPKIN_ADDR: "http://zipkin:9411"
 ```
 
 3) Run `make start`. Navigate in your browser to the appropriate ip address + port (9411) to see your traces. If you are using docker-machine + docker (as I do) this should be:

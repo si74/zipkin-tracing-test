@@ -3,4 +3,6 @@ import:
 - package: github.com/opentracing/opentracing-go
   version: v1.0.2
 - package: github.com/openzipkin/zipkin-go-opentracing
-  version: 0.3.0
+  version: v0.3.0
+- package: "github.com/uber/jaeger-client-go"
+  version: v2.8.0
